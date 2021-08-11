@@ -11,8 +11,8 @@ public class PersonRepo {
 
     private PersonJdbiRepo personJdbiRepo;
 
-    public PersonRepo(Jdbi jdpi) {
-        this.personJdbiRepo = jdpi.onDemand(PersonJdbiRepo.class);
+    public PersonRepo(Jdbi jdbi) {
+        this.personJdbiRepo = jdbi.onDemand(PersonJdbiRepo.class);
     }
 
     public Person insertPerson(String name) {
